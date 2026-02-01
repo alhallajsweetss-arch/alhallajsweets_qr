@@ -17,35 +17,67 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 18px;
         }
 
         .container {
             background: #ffffff;
             width: 100%;
             max-width: 420px;
-            padding: 30px 25px;
-            border-radius: 18px;
+            border-radius: 20px;
             box-shadow: 0 12px 30px rgba(0,0,0,0.08);
             text-align: center;
+            overflow: hidden; /* مهم عشان الهيدر يكون ناعم مع الحواف */
+        }
+
+        /* ====== Brand Header ====== */
+        .brand-header {
+           padding: 28px 18px 22px;
+      padding: 28px 18px 22px;
+    background: linear-gradient(135deg,
+        #7a2d0c,
+        #b3125b,
+        #5a189a
+    );
+    border-bottom: 1px solid rgba(0,0,0,0.18);
+        }
+
+        .logo-wrap {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 14px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 1px solid rgba(0,0,0,0.06);
         }
 
         .brand-logo {
-            width: 220px;
-              max-width: 95%;
-               margin-bottom: 30px;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+            width: 78px;
+            max-width: 80%;
+            height: auto;
+            filter: drop-shadow(0 3px 6px rgba(0,0,0,0.12));
         }
 
         .title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 6px;
+           font-size: 22px;
+           font-weight: bold;
+           margin: 0 0 6px;
+           color: #ffffff;
         }
 
         .subtitle {
-            font-size: 14px;
-            color: #777;
-            margin-bottom: 25px;
+             font-size: 14px;
+             color: rgba(255,255,255,0.85);
+             margin: 0;
+        }
+
+        /* ====== Content ====== */
+        .content {
+            padding: 22px 25px 26px;
         }
 
         .link-btn {
@@ -56,15 +88,20 @@
             text-decoration: none;
             color: #ffffff;
             padding: 14px;
-            border-radius: 12px;
+            border-radius: 14px;
             font-size: 16px;
-            margin-bottom: 15px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            margin-bottom: 14px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
         }
 
         .link-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.14);
+            opacity: 0.98;
+        }
+
+        .link-btn i {
+            font-size: 18px;
         }
 
         .instagram {
@@ -80,7 +117,7 @@
         }
 
         .footer {
-            margin-top: 20px;
+            margin-top: 18px;
             font-size: 12px;
             color: #aaa;
         }
@@ -91,31 +128,38 @@
 
 <div class="container">
 
-    <!-- اللوجو -->
-    <img src="logo.png" alt="حلويات الحلاج" class="brand-logo"> 
+    <!-- Brand Header -->
+    <div class="brand-header">
+        <div class="logo-wrap">
+            <img src="logo.png" alt="حلويات الحلاج" class="brand-logo">
+        </div>
 
-    <!-- الاسم -->
-    <div class="title">حلويات الحلاج</div>
-    <div class="subtitle">لما الحلو يصير فن</div>
+        <div class="title">حلويات الحلاج</div>
+        <div class="subtitle">لما الحلو يصير فن</div>
+    </div>
 
-    <!-- الروابط -->
-    <a href="https://www.instagram.com/alhallajsweets" target="_blank" class="link-btn instagram">
-        <i class="fab fa-instagram"></i>
-        إنستغرام
-    </a>
+    <!-- Content -->
+    <div class="content">
 
-    <a href="https://www.facebook.com/Sawa.alhallajsweets" target="_blank" class="link-btn facebook">
-        <i class="fab fa-facebook-f"></i>
-        فيسبوك
-    </a>
+        <a href="https://www.instagram.com/alhallajsweets" target="_blank" class="link-btn instagram">
+            <i class="fab fa-instagram"></i>
+            instagram
+        </a>
 
-    <a href="https://www.youtube.com/@AlhallajSweets" target="_blank" class="link-btn youtube">
-        <i class="fab fa-youtube"></i>
-        يوتيوب
-    </a>
+        <a href="https://www.facebook.com/Sawa.alhallajsweets" target="_blank" class="link-btn facebook">
+            <i class="fab fa-facebook-f"></i>
+            facebook
+        </a>
 
-    <div class="footer">
-        © جميع الحقوق محفوظة
+        <a href="https://www.youtube.com/@AlhallajSweets" target="_blank" class="link-btn youtube">
+            <i class="fab fa-youtube"></i>
+            youtube
+        </a>
+
+        <div class="footer">
+            © جميع الحقوق محفوظة
+        </div>
+
     </div>
 
 </div>
